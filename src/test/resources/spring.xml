@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+
+
+	<bean id="gatewayInfo" class="net.zoneland.gateway.test.demo.GatewayInfoDemo">
+		<property name="gateway">
+			<list>
+					<map>
+					    <entry key="id" value="cmpp-1" />
+					    <entry key="name" value="CMPP" />
+						<entry key="host" value="127.0.0.1" />
+						<entry key="port" value="7890" />
+						<entry key="local-host" value="127.0.0.1" />
+						<entry key="local-port" value="6000" />
+						<entry key="source-addr" value="333" />
+						<entry key="shared-secret" value="0555" />
+						<entry key="heartbeat-interval" value="3" />
+						<entry key="reconnect-interval" value="3" />
+						<entry key="heartbeat-noresponseout" value="3" />
+						<entry key="transaction-timeout" value="5" />
+						<entry key="version" value="1" />
+						<entry key="debug" value="true" />
+					</map>
+				
+					<map>
+						<entry key="id" value="cmpp-2" />
+						<entry key="name" value="CMPP" />
+						<entry key="host" value="127.0.0.1" />
+						<entry key="port" value="8890" />
+						<entry key="local-host" value="127.0.0.1" />
+						<entry key="local-port" value="6001" />
+						<entry key="source-addr" value="333" />
+						<entry key="shared-secret" value="0555" />
+						<entry key="heartbeat-interval" value="3" />
+						<entry key="reconnect-interval" value="3" />
+						<entry key="heartbeat-noresponseout" value="3" />
+						<entry key="transaction-timeout" value="5" />
+						<entry key="version" value="1" />
+						<entry key="debug" value="true" />
+					</map>
+					<map>
+						<entry key="id" value="cmpp3-1" />
+						<entry key="name" value="CMPP30" />
+						<entry key="host" value="127.0.0.1" />
+						<entry key="port" value="7891" />
+						<entry key="local-host" value="127.0.0.1" />
+						<entry key="local-port" value="6300" />
+						<entry key="source-addr" value="333" />
+						<entry key="shared-secret" value="0555" />
+						<entry key="heartbeat-interval" value="3" />
+						<entry key="reconnect-interval" value="3" />
+						<entry key="heartbeat-noresponseout" value="3" />
+						<entry key="transaction-timeout" value="5" />
+						<entry key="version" value="1" />
+						<entry key="debug" value="true" />
+					</map>
+					<map>
+						<entry key="id" value="cmpp3-2" />
+						<entry key="name" value="CMPP30" />
+						<entry key="host" value="127.0.0.1" />
+						<entry key="port" value="7891" />
+						<entry key="local-host" value="127.0.0.1" />
+						<entry key="local-port" value="6301" />
+						<entry key="source-addr" value="333" />
+						<entry key="shared-secret" value="0555" />
+						<entry key="heartbeat-interval" value="3" />
+						<entry key="reconnect-interval" value="3" />
+						<entry key="heartbeat-noresponseout" value="3" />
+						<entry key="transaction-timeout" value="5" />
+						<entry key="version" value="1" />
+						<entry key="debug" value="true" />
+					</map>
+					<map>
+						<entry key="id" value="sgip-1" />
+						<entry key="name" value="SGIP" />
+						<entry key="host" value="127.0.0.1" />
+						<entry key="port" value="8001" />
+						<entry key="local-host" value="127.0.0.1" />
+						<entry key="local-port" value="6500" />
+						<entry key="source-addr" value="333" />
+						<entry key="shared-secret" value="0555" />
+						<entry key="heartbeat-interval" value="3" />
+						<entry key="reconnect-interval" value="3" />
+						<entry key="heartbeat-noresponseout" value="3" />
+						<entry key="transaction-timeout" value="5" />
+						<entry key="version" value="1" />
+						<entry key="debug" value="true" />
+					</map>
+					<map>
+						<entry key="id" value="sgip-2" />
+						<entry key="name" value="SGIP" />
+						<entry key="host" value="127.0.0.1" />
+						<entry key="port" value="8001" />
+						<entry key="local-host" value="127.0.0.1" />
+						<entry key="local-port" value="6501" />
+						<entry key="source-addr" value="333" />
+						<entry key="shared-secret" value="0555" />
+						<entry key="heartbeat-interval" value="3" />
+						<entry key="reconnect-interval" value="3" />
+						<entry key="heartbeat-noresponseout" value="3" />
+						<entry key="transaction-timeout" value="5" />
+						<entry key="version" value="1" />
+						<entry key="debug" value="true" />
+					</map>
+					<map>
+						<entry key="id" value="smgp-1" />
+						<entry key="name" value="SMGP" />
+						<entry key="host" value="127.0.0.1" />
+						<entry key="port" value="9890" />
+						<entry key="local-host" value="127.0.0.1" />
+						<entry key="local-port" value="6700" />
+						<entry key="clientid" value="333" />
+						<entry key="shared-secret" value="0555" />
+						<entry key="heartbeat-interval" value="3" />
+						<entry key="reconnect-interval" value="3" />
+						<entry key="heartbeat-noresponseout" value="3" />
+						<entry key="transaction-timeout" value="5" />
+						<entry key="version" value="19" />
+						<entry key="debug" value="true" />
+					</map>
+					<map>
+						<entry key="id" value="smgp3-1" />
+						<entry key="name" value="SMGP3" />
+						<entry key="host" value="127.0.0.1" />
+						<entry key="port" value="9890" />
+						<entry key="local-host" value="127.0.0.1" />
+						<entry key="local-port" value="6900" />
+						<entry key="clientid" value="333" />
+						<entry key="shared-secret" value="0555" />
+						<entry key="heartbeat-interval" value="3" />
+						<entry key="reconnect-interval" value="3" />
+						<entry key="heartbeat-noresponseout" value="3" />
+						<entry key="transaction-timeout" value="5" />
+						<entry key="version" value="48" />
+						<entry key="debug" value="true" />
+					</map>
+			</list>
+		</property>
+
+		<property name="gatewayParams">
+			<map>
+			
+				<entry key="CMPP">
+					
+						<map>
+							<entry key="registered_Delivery" value="1" />
+							<entry key="service_Id" value="1" />
+							<entry key="fee_UserType" value="1" />
+							<entry key="fee_Terminal_Id" value="1" />
+							<entry key="tp_Pid" value="1" />
+							<entry key="fee_Type" value="1" />
+							<entry key="fee_Code" value="1" />
+							<entry key="src_Terminal_Id" value="1" />
+							<entry key="reserve" value="1" />
+							
+						</map>
+					
+				</entry>
+				<entry key="CMPP3">
+					
+						<map>
+							<entry key="registered_Delivery" value="value1" />
+							<entry key="service_Id" value="value2" />
+							<entry key="fee_UserType" value="value2" />
+							<entry key="fee_Terminal_Id" value="value2" />
+							<entry key="fee_Terminal_Type" value="value2" />
+							<entry key="tp_Pid" value="value2" />
+							<entry key="fee_Type" value="value2" />
+							<entry key="fee_Code" value="value2" />
+							<entry key="src_Terminal_Id" value="value2" />
+							<entry key="dest_Terminal_Type" value="value2" />
+							<entry key="linkID" value="value2" />
+							
+						</map>
+					
+				</entry>
+				<entry key="SGIP">
+					
+						<map>
+							<entry key="chargeNumber" value="value1" />
+							<entry key="corpId" value="value2" />
+							<entry key="serviceType" value="value2" />
+							<entry key="feeType" value="value2" />
+							<entry key="feeValue" value="value2" />
+							<entry key="givenValue" value="value2" />
+							<entry key="agentFlag" value="value2" />
+							<entry key="morelatetoMTFlag" value="value2" />
+							<entry key="reportFlag" value="value2" />
+							<entry key="tp_pid" value="value2" />
+							<entry key="messageLen" value="value2" />
+							<entry key="messageType" value="value2" />
+							<entry key="reserve" value="value2" />
+							
+						</map>
+					
+				</entry>
+				<entry key="SMGP">
+						<map>
+							<entry key="msgType" value="value1" />
+							<entry key="needReport" value="value2" />
+							<entry key="serviceId" value="value2" />
+							<entry key="feeType" value="value2" />
+							<entry key="feeCode" value="value2" />
+							<entry key="fixedFee" value="value2" />
+							<entry key="chargeTermId" value="value2" />
+						</map>
+				</entry>
+				<entry key="SMGP3">
+					
+						<map>
+							<entry key="msgType" value="6" />
+							<entry key="needReport" value="value2" />
+							<entry key="serviceId" value="value2" />
+							<entry key="feeType" value="value2" />
+							<entry key="feeCode" value="value2" />
+							<entry key="fixedFee" value="value2" />
+							<entry key="chargeTermId" value="value2" />
+							<entry key="reserve" value="value2" />
+							<entry key="tp_pid" value="value2" />
+							<entry key="linkId" value="value2" />
+							<entry key="msgSrc" value="value2" />
+							<entry key="chargeUserType" value="value2" />
+							<entry key="chargeTermType" value="value2" />
+							<entry key="chargeTermPseudo" value="value2" />
+							<entry key="destTermType" value="value2" />
+							<entry key="destTermPseudo" value="value2" />
+							<entry key="submitMsgType" value="value2" />
+							<entry key="spDealResult" value="value2" />
+							<entry key="mserviceId" value="value2" />
+						</map>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+</beans>

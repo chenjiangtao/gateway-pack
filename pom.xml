@@ -1,0 +1,105 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>net.zoneland</groupId>
+	<artifactId>gateway</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+
+	<name>gateway</name>
+	<url>http://maven.apache.org</url>
+
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<repositories>
+
+				<repository>
+					<id>land_repo</id>
+					<url>http://devsrv.zoneland.net/nexus/content/repositories/land_repo</url>
+					<snapshots>
+					</snapshots>
+				</repository>
+
+			</repositories>
+
+		</profile>
+
+	</profiles>
+
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.build.sourceencoding>UTF-8</project.build.sourceencoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>3.1.1.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>3.1.1.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>3.1.1.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>smslib</groupId>
+			<artifactId>smslib</artifactId>
+			<version>3.5.2</version>
+			<classifier>pduutils</classifier>
+		</dependency>
+		<dependency>
+			<groupId>smslib</groupId>
+			<artifactId>smslib</artifactId>
+			<version>3.5.2</version>
+		</dependency>
+		<dependency>
+			<groupId>smslib</groupId>
+			<artifactId>smslib</artifactId>
+			<version>3.5.2</version>
+			<classifier>sun-comm2</classifier>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+					<encoding>UTF-8</encoding>
+					<showWarnings>true</showWarnings>
+				</configuration>
+			</plugin>
+
+			
+			
+		</plugins>
+	</build>
+</project>

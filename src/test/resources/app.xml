@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<connect>
+		<CMPPConnect>
+			<!-- InfoX主机地址 -->
+			<host>10.76.148.147</host>
+			<!-- InfoX主机端口号 -->
+			<port>7890</port>
+			<!--(登录帐号SP…ID) -->
+			<source-addr>new</source-addr>
+			<!--登录密码 -->
+			<shared-secret></shared-secret>
+			<!-- 心跳信息发送间隔时间(单位：秒) -->
+			<heartbeat-interval>30</heartbeat-interval>
+			<!-- 连接中断时重连间隔时间(单位：秒) -->
+			<reconnect-interval>30</reconnect-interval>
+			<!-- 需要重连时，连续发出心跳而没有接收到响应的个数（单位：个) -->
+			<heartbeat-noresponseout>5</heartbeat-noresponseout>
+			<!-- 操作超时时间(单位：秒) -->
+			<transaction-timeout>10</transaction-timeout>
+			<!--双方协商的版本号(大于0，小于256) -->
+			<version>0</version>
+			<!--是否属于调试状态,true表示属于调试状态，所有的消息被打印输出到屏幕，false表示不属于调试状态，所有的消息不被输出 -->
+			<debug>false</debug>
+		</CMPPConnect>
+		<!--与InfoX建立连接所需参数 -->
+		<CNGPConnect>
+			<!-- InfoX主机地址 -->
+			<host>10.70.107.64</host>
+			<!-- InfoX主机端口号 -->
+			<port>9890</port>
+			<!--(登录帐号SP…ID) -->
+			<clientid>SP</clientid>
+			<!--登录密码 -->
+			<shared-secret></shared-secret>
+			<!-- 心跳信息发送间隔时间(单位：秒) -->
+			<heartbeat-interval>60</heartbeat-interval>
+			<!-- 连接中断时重连间隔时间(单位：秒) -->
+			<reconnect-interval>30</reconnect-interval>
+			<!-- 需要重连时，连续发出心跳而没有接收到响应的个数（单位：个) -->
+			<heartbeat-noresponseout>3</heartbeat-noresponseout>
+			<!-- 操作超时时间(单位：秒) -->
+			<transaction-timeout>10</transaction-timeout>
+			<!--双方协商的版本号(大于0，小于256) -->
+			<version>0</version>
+			<!--是否属于调试状态,true表示属于调试状态，所有的消息被打印输出到屏幕，false表示不属于调试状态，所有的消息不被输出 -->
+			<debug>true</debug>
+		</CNGPConnect>
+		<!--与InfoX建立连接所需参数 -->
+		<SMGPConnect>
+			<!-- InfoX主机地址 -->
+			<host>10.76.175.218</host>
+			<!-- InfoX主机端口号 -->
+			<port>8890</port>
+			<!--CP编号或者SWGW编号 -->
+			<clientid>sp</clientid>
+			<!--登录密码 -->
+			<shared-secret>new</shared-secret>
+			<!-- 心跳信息发送间隔时间(单位：秒) -->
+			<heartbeat-interval>30</heartbeat-interval>
+			<!-- 连接中断时重连间隔时间(单位：秒) -->
+			<reconnect-interval>30</reconnect-interval>
+			<!-- 需要重连时，连续发出心跳而没有接收到响应的个数（单位：个) -->
+			<heartbeat-noresponseout>5</heartbeat-noresponseout>
+			<!-- 操作超时时间(单位：秒) -->
+			<transaction-timeout>10</transaction-timeout>
+			<!--双方协商的版本号(大于0，小于256) -->
+			<version>19</version>
+			<!--是否属于调试状态,true表示属于调试状态，所有的消息被打印输出到屏幕，false表示不属于调试状态，所有的消息不被输出 -->
+			<debug>false</debug>
+		</SMGPConnect>
+		<!--Submit消息配置参数 -->
+		<CMPPSubmitMessage>
+			<!--相同Msg_id消息的总条数，目前只能为1 -->
+			<pk_Total>1</pk_Total>
+			<!--相同Msg_id的消息序号，目前只能为1 -->
+			<pk_Number>1</pk_Number>
+			<!--是否需要状态报告，0:不需要，1:需要，2:产生SMS话单 -->
+			<registered_Delivery>1</registered_Delivery>
+			<!--信息类别 -->
+			<msg_Level>1</msg_Level>
+			<!--业务类型，应与Infox对应 -->
+			<service_Id>websms</service_Id>
+			<!--计费用户类型，0:对目的终端MSISDN计费，1:对源终端MSISDN计费，2:对SP计费，3:本字段无效 -->
+			<fee_UserType>1</fee_UserType>
+			<!--GSM协议类型 -->
+			<tp_Pid>0</tp_Pid>
+			<!--GSM协议类型 -->
+			<tp_Udhi>0</tp_Udhi>
+			<!--信息内容来源，对应于登录Infox的帐号 -->
+			<msg_Src>websms</msg_Src>
+			<!--资费类别，“短消息类型”为“发送”，对“计费用户号码”不计信息费，此类话单仅用于核减SP对称的信道费 -->
+			<fee_Type>02</fee_Type>
+			<!--资费代码，以分为单位 -->
+			<fee_Code>999</fee_Code>
+			<!--存活有效期(单位:分钟) -->
+			<valid_Time />
+			<!--定时发送时间 -->
+			<at_Time />
+			<!--源终端MSISDN号码(为SP的服务代码或前缀, 为服务代码的长号码, 网关将该号码完整的填到SMPP协议相应的destination_address字段，该号码最终在用户手机上显示为短消息的主叫号码) 
+				(没有可以为空) -->
+			<src_Terminal_Id>7777</src_Terminal_Id>
+			<!--接收消息的用户数量(小于100个用户) -->
+			<destUsr_tl>1</destUsr_tl>
+			<!--接收业务的MSISDN号码，即被叫号码 -->
+			<dest_Terminal_Id>13</dest_Terminal_Id>
+		</CMPPSubmitMessage>
+		<SMPPConnect>
+			<!-- InfoX主机地址 -->
+			<host>10.71.105.37</host>
+			<!-- InfoX主机端口号 -->
+			<port>5018</port>
+			<!--SP编号 -->
+			<system-id>SP</system-id>
+			<!--登录密码 -->
+			<password></password>
+			<!--SP编号 -->
+			<system-type>sp</system-type>
+			<!-- 心跳信息发送间隔时间(单位：秒) -->
+			<heartbeat-interval>30</heartbeat-interval>
+			<!-- 连接中断时重连间隔时间(单位：秒) -->
+			<reconnect-interval>30</reconnect-interval>
+			<!-- 需要重连时，连续发出心跳而没有接收到响应的个数（单位：个) -->
+			<heartbeat-noresponseout>5</heartbeat-noresponseout>
+			<!-- 操作超时时间(单位：秒) -->
+			<transaction-timeout>10</transaction-timeout>
+			<!--双方协商的版本号(大于0，小于256) -->
+			<interface-version>34</interface-version>
+			<!--addr-ton -->
+			<addr-ton>0</addr-ton>
+			<!--addr-npi -->
+			<addr-npi>0</addr-npi>
+			<!--address-range -->
+			<address-range></address-range>
+			<!--是否属于调试状态,true表示属于调试状态，所有的消息被打印输出到屏幕，false表示不属于调试状态，所有的消息不被输出 -->
+			<debug>true</debug>
+		</SMPPConnect>
+		<SGIPConnect>
+			<!-- SMG主机地址 -->
+			<host>10.71.122.200</host>
+			<!-- SMG主机端口号 -->
+			<port>8801</port>
+			<!-- 操作超时时间(单位：秒) -->
+			<transaction-timeout>10</transaction-timeout>
+			<!-- 物理连接读操作超时时间(单位：秒) -->
+			<read-timeout>15</read-timeout>
+			<!--SP…ID(最大为六位字符) -->
+			<source-addr>222222</source-addr>
+			<!--双方协商的版本号(大于0，小于256) -->
+			<version>1</version>
+			<!--登陆用户名(最大为六位字符) -->
+			<login-name>new3</login-name>
+			<!--登陆密码 -->
+			<login-pass>new3</login-pass>
+			<!--是否属于调试状态,true表示属于调试状态，所有的消息被打印输出到屏幕，false表示不属于调试状态，所有的消息不被输出 -->
+			<debug>false</debug>
+		</SGIPConnect>
+	</connect>
+	<param>
+		<CMPP>
+			<registered_Delivery type="int">1</registered_Delivery>
+			<service_Id type="string">1</service_Id>
+			<fee_UserType type="int">1</fee_UserType>
+			<fee_Terminal_Id type="string">1</fee_Terminal_Id>
+			<tp_Pid type="int">1</tp_Pid>
+			<fee_Type type="string">1</fee_Type>
+			<fee_Code type="string">1</fee_Code>
+			<src_Terminal_Id type="string">1</src_Terminal_Id>
+			<reserve type="string">1</reserve>
+		</CMPP>
+		<CMPP3>
+			<registered_Delivery type="int">1</registered_Delivery>
+			<service_Id type="string">1</service_Id>
+			<fee_UserType type="int">1</fee_UserType>
+			<fee_Terminal_Id type="string">1</fee_Terminal_Id>
+			<fee_Terminal_Type type="int">1</fee_Terminal_Type>
+			<tp_Pid type="int">1</tp_Pid>
+			<fee_Type type="string">1</fee_Type>
+			<fee_Code type="string">1</fee_Code>
+			<src_Terminal_Id type="string">1</src_Terminal_Id>
+			<dest_Terminal_Type type="int">1</dest_Terminal_Type>
+			<linkID type="string">1</linkID>
+
+		</CMPP3>
+		<SGIP>
+			<chargeNumber type="string">1</chargeNumber>
+			<corpId type="string">1</corpId>
+			<serviceType type="string">1</serviceType>
+			<feeType type="int">1</feeType>
+			<feeValue type="string">1</feeValue>
+			<givenValue type="string">1</givenValue>
+			<agentFlag type="int">1</agentFlag>
+			<morelatetoMTFlag type="int">1</morelatetoMTFlag>
+			<reportFlag type="int">1</reportFlag>
+			<tp_pid type="int">1</tp_pid>
+			<messageLen type="int">1</messageLen>
+			<messageType type="int">1</messageType>
+			<reserve type="string">1</reserve>
+
+
+		</SGIP>
+		<SMGP>
+			<msgType type="int">6</msgType>
+			<needReport type="int">1</needReport>
+			<serviceId type="string">1</serviceId>
+			<feeType type="string">1</feeType>
+			<feeCode type="string">1</feeCode>
+			<fixedFee type="string">1</fixedFee>
+			<chargeTermId type="string">1</chargeTermId>
+
+
+		</SMGP>
+		<SMGP3>
+			<msgType type="int">6</msgType>
+			<needReport type="int">1</needReport>
+			<serviceId type="string">1</serviceId>
+			<feeType type="string">1</feeType>
+			<feeCode type="string">1</feeCode>
+			<fixedFee type="string">1</fixedFee>
+			<chargeTermId type="string">1</chargeTermId>
+			<reserve type="string">1</reserve>
+			<tp_pid type="int">1</tp_pid>
+			<linkId type="string">1</linkId>
+			<msgSrc type="string">1</msgSrc>
+			<chargeUserType type="int">1</chargeUserType>
+			<chargeTermType type="int">1</chargeTermType>
+			<chargeTermPseudo type="string">1</chargeTermPseudo>
+			<destTermType type="int">1</destTermType>
+			<destTermPseudo type="string">1</destTermPseudo>
+			<submitMsgType type="int">1</submitMsgType>
+			<spDealResult type="int">1</spDealResult>
+			<mserviceId type="string">1</mserviceId>
+		</SMGP3>
+	</param>
+</config>
